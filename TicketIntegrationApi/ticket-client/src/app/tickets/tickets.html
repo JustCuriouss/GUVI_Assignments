@@ -1,0 +1,11 @@
+<h1>Your Tickets</h1>
+<p *ngFor="let t of tickets()">
+    <label><strong>Id: </strong> {{ t.id }}</label><br>
+    <label><strong>Short Description: </strong>{{ t.shortDescription }}</label><br>
+    <label><strong>Description: </strong>{{ t.description }}</label><br>
+    <label><strong>Created Date: </strong>{{ t.createdDate | date:'mediumDate'}}</label><br>
+    <label><strong>Severity: </strong>{{ t.severity }}</label><br>
+    <label><strong>Target Date: </strong>{{ t.targetDate | date:'mediumDate'}}</label><br>
+    <label><strong>Status: </strong>{{ t.status }}</label><br>
+</p>
+
