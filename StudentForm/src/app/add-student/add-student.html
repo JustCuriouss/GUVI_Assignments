@@ -1,0 +1,56 @@
+<h2>Add Student</h2>
+
+<form [formGroup]="studentForm" (ngSubmit)="save()">
+
+  <label>Name:</label>
+  <input type="text" formControlName="name">
+  <div *ngIf="studentForm.get('name')?.invalid && studentForm.get('name')?.touched">
+    Name must be at least 5 characters.
+  </div>
+
+  <br><br>
+
+  <label>Class:</label>
+  <select formControlName="classValue">
+    <option value="">Select</option>
+    <option value="6">Class 6</option>
+    <option value="7">Class 7</option>
+    <option value="8">Class 8</option>
+    <option value="9">Class 9</option>
+  </select>
+
+  <p *ngIf="classMessage">{{ classMessage }}</p>
+
+  <br>
+
+  <label>Gender:</label>
+  <input type="radio" value="Male" formControlName="gender"> Male
+  <input type="radio" value="Female" formControlName="gender"> Female
+
+  <br><br>
+
+  <label>
+    <input type="checkbox" formControlName="hasHobby"> I have a hobby
+  </label>
+
+  <div *ngIf="studentForm.get('hasHobby')?.value">
+    <label>Hobby:</label>
+    <input type="text" formControlName="hobby">
+  </div>
+
+  <br>
+
+  <label>Favourite Subject:</label>
+  <select formControlName="favouriteSubject">
+    <option value="">Select</option>
+    <option>Maths</option>
+    <option>Science</option>
+    <option>English</option>
+    <option>History</option>
+  </select>
+
+  <br><br>
+
+  <button type="submit" [disabled]="studentForm.invalid">Save</button>
+
+</form>

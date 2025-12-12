@@ -1,0 +1,12 @@
+<h2>All Students</h2>
+
+<div *ngFor="let s of students" style="margin-bottom: 15px;">
+
+  <strong>Name:</strong> {{ s.name }} <br>
+  <strong>Class:</strong> {{ s.classValue }} <br>
+  <strong>Gender:</strong> {{ s.gender }} <br>
+  <strong>Hobby:</strong> {{ s.hasHobby ? s.hobby : 'No hobby' }} <br>
+  <strong>Favourite Subject:</strong> {{ s.favouriteSubject }}
+
+  <hr>
+</div>
