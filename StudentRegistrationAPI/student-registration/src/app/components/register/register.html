@@ -1,0 +1,28 @@
+<h2>Register</h2>
+
+<p style="color:red" *ngIf="error()">{{ error() }}</p>
+
+<p style="color:green" *ngIf="success()">{{ success() }}</p>
+
+<input
+  placeholder="Email"
+  type="email"
+  [ngModel]="email()"
+  (ngModelChange)="email.set($event)" />
+
+<br><br>
+
+<input
+  placeholder="Password"
+  type="password"
+  [ngModel]="password()"
+  (ngModelChange)="password.set($event)" />
+
+<br><br>
+
+<button (click)="register()">Register</button>
+
+<br><br>
+<a style="cursor: pointer; color: blue; text-decoration: underline;" (click)="router.navigate(['/login'])">
+  Already have an account? Login
+</a>
