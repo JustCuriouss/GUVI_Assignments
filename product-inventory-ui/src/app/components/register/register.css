@@ -1,0 +1,47 @@
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.auth-card {
+  width: 400px;
+  padding: 20px;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+mat-card-footer {
+  text-align: center;
+  padding: 10px;
+}
+
+/* MESSAGE BOX STYLES */
+.msg-box {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+  white-space: pre-wrap; /* Allows \n newlines to show */
+}
+
+/* Success (Green) */
+.msg-box.success {
+  background-color: #e6fffa;
+  border: 1px solid #2e7d32;
+  color: #1b5e20;
+  font-weight: bold;
+}
+
+/* Error (Red) */
+.msg-box.error {
+  background-color: #ffebee;
+  border: 1px solid #c62828;
+  color: #b71c1c;
+}
